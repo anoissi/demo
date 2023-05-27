@@ -2,26 +2,70 @@ package com.example.demo;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.TreeSet;
 
 @SpringBootApplication
 public class DemoApplication {
 
     public void test() {
-        List<Animal> l = new ArrayList<>();
-        l.add(new Animal(6, 5));
-        l.add(new Animal(5, 6));
+        Set<Integer> s = new HashSet<>();
 
-        Collections.sort(l, new AnimalComparatorByLongeur());
+        s.add(5);
+        s.add(-1);
+        s.add(3);
+        s.add(3);
+        s.add(3);
+        s.add(3);
+        s.add(13);
+        s.add(33);
+        s.add(3);
+        s.add(3);
+        s.add(31);
+        s.add(32);
+        s.add(3);
+        s.add(3);
+        s.add(3);
+        s.add(13);
+        s.add(3);
+        s.add(35);
+        s.add(3);
+        s.add(83);
+        s.add(3);
 
+        // ------- ------ -----
 
+        Set<Integer> s1 = new TreeSet<>();
 
+        s.add(5);
+        s.add(-1);
+        s.add(3);
+        s.add(3);
+        s.add(3);
+        s.add(3);
+        s.add(13);
+        s.add(33);
+        s.add(3);
+        s.add(3);
+        s.add(31);
+        s.add(32);
+        s.add(3);
+        s.add(3);
+        s.add(3);
+        s.add(13);
+        s.add(3);
+        s.add(35);
+        s.add(3);
+        s.add(83);
+        s.add(3);
 
-
-        for (int i = 0; i < l.size(); i++) {
-            System.out.println(l.get(i));
+        for (Integer el : s) {
+            System.out.println(el);
+        }
+        System.out.println("//////////////////////////////////////");
+        for (Integer el : s1) {
+            System.out.println(el);
         }
     }
 
