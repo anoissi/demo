@@ -16,6 +16,10 @@ public class DemoApplication {
 
         Collections.sort(l, new AnimalComparatorByLongeur());
 
+
+
+
+
         for (int i = 0; i < l.size(); i++) {
             System.out.println(l.get(i));
         }
