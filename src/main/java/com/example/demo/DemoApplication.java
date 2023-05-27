@@ -26,7 +26,9 @@ public class DemoApplication {
 
         Formule formule1 = (int a) -> formule.sqrt(a);
 
-        System.out.println(formule1.calculer(144));
+        System.out.println("méthode anonyme: "+ formule.calculer(144));
+        System.out.println("méthode lamda1: "+ formule1.calculer(144));
+        System.out.println("méthode lamda2: "+ ((Formule)((int a) -> formule.sqrt(a))).calculer(144));
     }
 
     public static void main(String[] args) {
