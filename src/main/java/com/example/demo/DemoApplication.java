@@ -8,23 +8,15 @@ import java.util.*;
 public class DemoApplication {
 
     public void test() {
-       Set<Student> abdo = new TreeSet<>((Comparator) new StudentComparator());
+        Map<String, String> stringMap = new HashMap<>();
+        stringMap.put("el1", "value1");
+        stringMap.put("el2", "value2");
 
-        abdo.add(new Student("Ali"));
-        abdo.add(new Student("Sami"));
-        abdo.add(new Student("Mariem") );
-        abdo.add(new Student("Ali"));
+        System.out.println(stringMap.entrySet());
 
-        /*for (Student student : students) {
-            System.out.print(student.name+" ");
-        }*/
-
-        Iterator<Student> studentIterator = abdo.iterator();
-
-        while (studentIterator.hasNext()) {
-            System.out.print(studentIterator.next().name + " ");
+        for(Map.Entry el : stringMap.entrySet()) {
+            System.out.println(el.getValue());
         }
-
 
     }
 
