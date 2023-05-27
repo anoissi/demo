@@ -8,7 +8,7 @@ import java.util.*;
 public class DemoApplication {
 
     public void test() {
-        Map<Student, Voiture> studentVoitureMap = new TreeMap<>();
+        Map<Student, Voiture> studentVoitureMap = new TreeMap<>(new StudentComparator());
 
         Student student1 = new Student("Ali");
         Student student2 = new Student("Badr");
