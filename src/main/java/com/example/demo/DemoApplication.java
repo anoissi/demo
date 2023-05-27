@@ -2,6 +2,8 @@ package com.example.demo;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import java.util.function.Function;
+
 @SpringBootApplication
 public class DemoApplication {
     @FunctionalInterface
@@ -12,11 +14,9 @@ public class DemoApplication {
 
     public void test() {
 
+        Function<Integer, Integer> transFormIntgerTOs = n -> n*n;
 
-        Formule formule1 = a -> a + 1 ;
-
-        System.out.println("méthode lamda1: "+ formule1.calculer(144));
-        System.out.println("méthode lamda2: "+ ((Formule)((int a) -> a-154)).calculer(144).compareTo(2));
+        System.out.println(transFormIntgerTOs.apply(5));
     }
 
     public static void main(String[] args) {
