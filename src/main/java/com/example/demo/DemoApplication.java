@@ -12,11 +12,12 @@ public class DemoApplication {
         stringMap.put("el1", "value1");
         stringMap.put("el2", "value2");
 
-        System.out.println(stringMap.entrySet());
-
-        for(Map.Entry el : stringMap.entrySet()) {
-            System.out.println(el.getValue());
-        }
+        System.out.println(stringMap.get("el1"));
+        System.out.println(stringMap.isEmpty());
+        System.out.println(stringMap.keySet());
+        System.out.println(stringMap.values());
+        System.out.println(stringMap.remove("el1"));
+        System.out.println(stringMap);
 
     }
 
