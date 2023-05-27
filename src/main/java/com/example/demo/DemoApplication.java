@@ -11,6 +11,7 @@ public class DemoApplication {
         Map<String, String> stringMap = new HashMap<>();
         stringMap.put("el1", "value1");
         stringMap.put("el2", "value2");
+        stringMap.put(null, "value2");
 
         System.out.println(stringMap.get("el1"));
         System.out.println(stringMap.isEmpty());
