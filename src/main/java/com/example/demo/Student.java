@@ -2,7 +2,7 @@ package com.example.demo;
 
 import java.util.Objects;
 
-public class Student {
+public class Student implements Comparable<Student>{
     String name;
 
     public Student(String name) {
@@ -10,15 +10,12 @@ public class Student {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Student student = (Student) o;
-        return Objects.equals(name, student.name);
+    public int compareTo(Student o) {
+        return name.compareTo(o.name);
     }
 
     @Override
-    public int hashCode() {
-        return Objects.hash(name);
+    public String toString() {
+        return name;
     }
 }

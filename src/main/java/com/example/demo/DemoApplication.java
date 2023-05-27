@@ -8,17 +8,20 @@ import java.util.*;
 public class DemoApplication {
 
     public void test() {
-        Map<String, String> stringMap = new HashMap<>();
-        stringMap.put("el1", "value1");
-        stringMap.put("el2", "value2");
-        stringMap.put(null, "value2");
+        Map<Student, Voiture> studentVoitureMap = new TreeMap<>();
 
-        System.out.println(stringMap.get("el1"));
-        System.out.println(stringMap.isEmpty());
-        System.out.println(stringMap.keySet());
-        System.out.println(stringMap.values());
-        System.out.println(stringMap.remove("el1"));
-        System.out.println(stringMap);
+        Student student1 = new Student("Ali");
+        Student student2 = new Student("Badr");
+
+        Voiture voiture1 = new Voiture("BM");
+        Voiture voiture2 = new Voiture("Nissan");
+
+        studentVoitureMap.put(student1, voiture1);
+        studentVoitureMap.put(student2, voiture2);
+
+
+        System.out.println(studentVoitureMap);
+
 
     }
 
