@@ -1,6 +1,6 @@
 package com.example.demo;
 
-class Animal {
+class Animal implements Comparable<Animal>{
     int age;
     int longeur;
 
@@ -10,8 +10,15 @@ class Animal {
     }
 
 
+
+
     @Override
     public String toString() {
-        return "age: " + age + " longeur: " + longeur;
+        return "(age: " + age + " longeur: " + longeur + ")";
+    }
+
+    @Override
+    public int compareTo(Animal o) {
+        return o.age-this.age;
     }
 }
