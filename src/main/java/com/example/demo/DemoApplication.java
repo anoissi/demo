@@ -7,15 +7,29 @@ import java.util.*;
 @SpringBootApplication
 public class DemoApplication {
 
+    interface Formule {
+        double calculer(int a);
+
+        double multipluer(int a, int b);
+
+        default double sqrt(int a) {
+            return Math.sqrt(a);
+        }
+    }
+
     public void test() {
+        Formule formule = new Formule() {
+            @Override
+            public double calculer(int a) {
+                return sqrt(a);
+            }
 
-        Animal a1 = new Animal(2, 1, "Cheval");
-        Animal a2 = new Animal(1, 1, "Chien");
-        Animal a3 = new Animal(1, 1, "Chat");
-
-        System.out.println(a1);
-        System.out.println(" Nombre d'objet = "+Animal.counter);
-
+            @Override
+            public double multipluer(int a, int b) {
+                return 0;
+            }
+        };
+        System.out.println(formule.calculer(144));
     }
 
     public static void main(String[] args) {
