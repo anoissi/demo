@@ -8,20 +8,13 @@ import java.util.*;
 public class DemoApplication {
 
     public void test() {
-        Map<Student, Voiture> studentVoitureMap = new TreeMap<>(new StudentComparator());
 
-        Student student1 = new Student("Ali");
-        Student student2 = new Student("Badr");
+        Animal a1 = new Animal(2, 1, "Cheval");
+        Animal a2 = new Animal(1, 1, "Chien");
+        Animal a3 = new Animal(1, 1, "Chat");
 
-        Voiture voiture1 = new Voiture("BM");
-        Voiture voiture2 = new Voiture("Nissan");
-
-        studentVoitureMap.put(student1, voiture1);
-        studentVoitureMap.put(student2, voiture2);
-
-
-        System.out.println(studentVoitureMap);
-
+        System.out.println(a1);
+        System.out.println(" Nombre d'objet = "+Animal.counter);
 
     }
 
