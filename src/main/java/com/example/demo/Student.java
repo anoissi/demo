@@ -9,6 +9,10 @@ public class Student {
         this.name = name;
     }
 
+    public Student() {
+        this.name = "Abdessattar";
+    }
+
     @Override
     public String toString() {
         return name;
