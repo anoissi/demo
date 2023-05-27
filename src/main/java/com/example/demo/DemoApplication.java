@@ -2,24 +2,30 @@ package com.example.demo;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import java.util.HashSet;
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.*;
 
 @SpringBootApplication
 public class DemoApplication {
 
     public void test() {
-       Set<Student> students = new HashSet<>();
+       Set<Student> abdo = new TreeSet<>((Comparator) new StudentComparator());
 
-        students.add(new Student("Ali"));
-        students.add(new Student("Sami"));
-        students.add(new Student("Mariem") );
-        students.add(new Student("Ali"));
+        abdo.add(new Student("Ali"));
+        abdo.add(new Student("Sami"));
+        abdo.add(new Student("Mariem") );
+        abdo.add(new Student("Ali"));
 
-        for (Student student : students) {
+        /*for (Student student : students) {
             System.out.print(student.name+" ");
+        }*/
+
+        Iterator<Student> studentIterator = abdo.iterator();
+
+        while (studentIterator.hasNext()) {
+            System.out.print(studentIterator.next().name + " ");
         }
+
+
     }
 
     public static void main(String[] args) {
