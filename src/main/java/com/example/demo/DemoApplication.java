@@ -10,14 +10,15 @@ import java.util.TreeSet;
 public class DemoApplication {
 
     public void test() {
-       Set<Animal> animals = new TreeSet<>();
+       Set<Student> students = new HashSet<>();
 
-       animals.add(new Animal(5, 36));
-       animals.add(new Animal(6, 12));
-       animals.add(new Animal(2, 7));
+        students.add(new Student("Ali"));
+        students.add(new Student("Sami"));
+        students.add(new Student("Mariem") );
+        students.add(new Student("Ali"));
 
-        for (Animal animal : animals) {
-            System.out.print(animal+" ");
+        for (Student student : students) {
+            System.out.print(student.name+" ");
         }
     }
 
