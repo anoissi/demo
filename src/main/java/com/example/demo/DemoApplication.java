@@ -10,17 +10,23 @@ public class DemoApplication {
         Student student2 = new Student();
         Student student3 = new Student();
 
-        // System.out.println("Static Field: "+ Student.getStaticField());
+        student1.increment();
+        student2.increment();
+        student3.increment();
+        student1.increment();
 
-        int v1 = student1.instanceField;
-        int v2 = student1.staticField;
+        int i1 = student1.instanceField;
+        int s1 = Student.staticField;
 
-        int v11 = Student.instanceField; /// erreur
-        int v22 = Student.staticField;
+        int i2 = student2.instanceField;
+        int s2 = Student.staticField;
 
+        int i3 = student3.instanceField;
+        int s3 = Student.staticField;
 
-
-        System.out.println("instance : "+ v1+ " static: "+  v2+" static: ");
+        System.out.println("student1 => instance : " + i1 + " static: " + s1); // => 3 7
+        System.out.println("student2 => instance : " + i2 + " static: " + s2); // => 2 7
+        System.out.println("student3 => instance : " + i3 + " static: " + s3); // => 2 7
     }
 
     public static void main(String[] args) {

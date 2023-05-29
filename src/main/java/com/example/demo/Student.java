@@ -4,9 +4,13 @@ public class Student {
 
     int instanceField = 0;
     static int staticField = 0;
-
     public Student() {
-       //  instanceField++;
-       //  staticField++;
+        instanceField++;
+        staticField++;
+    }
+
+    void increment() {
+        instanceField++;
+        staticField++;
     }
 }
